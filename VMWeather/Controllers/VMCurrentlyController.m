@@ -16,14 +16,16 @@
     if (self == nil) return nil;
 
     self.apiController = [[VMAPIController alloc] initWithAPIKey:FORECAST_IO_API_KEY];
+    return self;
+}
 
-    [self.apiController fetchCurrentWeatherForLatitude:39.9522222 longitude:-75.1641667 succes:^(VMCurrentWeather *weather) {
+- (void)updateWeatherWithLatitude:(double)latitude longitude:(double)longitude;
+{
+    [self.apiController fetchCurrentWeatherForLatitude:latitude longitude:longitude succes:^(VMCurrentWeather *weather) {
         self.viewModel = [[VMCurrentlyViewModel alloc] initWithCurrentWeather:weather];
     } failure:^(NSError *error, NSString *message) {
-
+        NSLog(@"%@", message);
     }];
-
-    return self;
 }
 
 @end

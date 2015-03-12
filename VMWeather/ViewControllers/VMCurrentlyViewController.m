@@ -21,7 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.refreshButton.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    self.refreshButton.layer.borderWidth = 2;
+    self.refreshButton.layer.cornerRadius = 4;
+
     [self.controller addObserver:self forKeyPath:@"viewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) context:nil];
+
+    [self.controller updateWeatherWithLatitude:39.9522222 longitude:-75.1641667]; // TODO: Location Services
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -47,4 +53,8 @@
     }
 }
 
+- (IBAction)refreshButtonDidPress:(UIButton *)sender
+{
+    [self.controller updateWeatherWithLatitude:39.9522222 longitude:-75.1641667];
+}
 @end

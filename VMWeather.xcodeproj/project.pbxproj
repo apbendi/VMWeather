@@ -13,6 +13,7 @@
 		B482C2071AB2173F00D2DF00 /* VMCurrentWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = B482C2061AB2173F00D2DF00 /* VMCurrentWeather.m */; };
 		B482C20B1AB21A1600D2DF00 /* VMCurrentlyController.m in Sources */ = {isa = PBXBuildFile; fileRef = B482C20A1AB21A1600D2DF00 /* VMCurrentlyController.m */; };
 		B482C20F1AB220EC00D2DF00 /* VMCurrentlyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B482C20E1AB220EC00D2DF00 /* VMCurrentlyViewModel.m */; };
+		B482C2151AB2371F00D2DF00 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = B482C2141AB2371F00D2DF00 /* reload.png */; };
 		B4E628FF1AB21021006A1A16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E628FE1AB21021006A1A16 /* main.m */; };
 		B4E629021AB21021006A1A16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629011AB21021006A1A16 /* AppDelegate.m */; };
 		B4E629051AB21021006A1A16 /* VMCurrentlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629041AB21021006A1A16 /* VMCurrentlyViewController.m */; };
@@ -47,6 +48,7 @@
 		B482C20A1AB21A1600D2DF00 /* VMCurrentlyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMCurrentlyController.m; sourceTree = "<group>"; };
 		B482C20D1AB220EC00D2DF00 /* VMCurrentlyViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMCurrentlyViewModel.h; sourceTree = "<group>"; };
 		B482C20E1AB220EC00D2DF00 /* VMCurrentlyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMCurrentlyViewModel.m; sourceTree = "<group>"; };
+		B482C2141AB2371F00D2DF00 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reload.png; path = ../../../../Downloads/reload.png; sourceTree = "<group>"; };
 		B4E628F91AB21021006A1A16 /* VMWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E628FD1AB21021006A1A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4E628FE1AB21021006A1A16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		B4E629251AB2106A006A1A16 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B482C2141AB2371F00D2DF00 /* reload.png */,
 				B4E629091AB21021006A1A16 /* Main.storyboard */,
 				B4E6290C1AB21021006A1A16 /* Images.xcassets */,
 				B4E6290E1AB21021006A1A16 /* LaunchScreen.xib */,
@@ -298,6 +301,7 @@
 				B4E6290B1AB21021006A1A16 /* Main.storyboard in Resources */,
 				B4E629101AB21021006A1A16 /* LaunchScreen.xib in Resources */,
 				B4E6290D1AB21021006A1A16 /* Images.xcassets in Resources */,
+				B482C2151AB2371F00D2DF00 /* reload.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

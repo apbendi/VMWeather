@@ -18,41 +18,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Summary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pce-Iq-b4U" userLabel="Summary Label">
-                                <rect key="frame" x="132" y="211" width="170" height="25.5"/>
+                                <rect key="frame" x="132" y="141" width="170" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eK-R3-bPB" userLabel="Date Label">
-                                <rect key="frame" x="515" y="522" width="64.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72°F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl2-gy-W3U" userLabel="Temp Label">
-                                <rect key="frame" x="198" y="240" width="204" height="119.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eK-R3-bPB" userLabel="Date Label">
+                                <rect key="frame" x="504" y="514" width="88" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCw-f0-m2a" userLabel="Emoji Label">
-                                <rect key="frame" x="374.5" y="320" width="72" height="86"/>
+                                <rect key="frame" x="374" y="250" width="72" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxq-yO-sQ5" userLabel="Refresh Button">
+                                <rect key="frame" x="50" y="400" width="500" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8up-f3-cpw"/>
+                                    <constraint firstAttribute="width" constant="44" id="Akp-U1-2DS"/>
+                                    <constraint firstAttribute="width" constant="200" id="hMU-Cc-Ze4"/>
+                                    <constraint firstAttribute="height" constant="44" id="xlQ-mf-woe"/>
+                                </constraints>
+                                <state key="normal" title="REFRESH">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Akp-U1-2DS"/>
+                                        <exclude reference="hMU-Cc-Ze4"/>
+                                        <exclude reference="xlQ-mf-woe"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="refreshButtonDidPress:" destination="9pv-A4-QxB" eventType="touchUpInside" id="yqe-XL-Lt1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated at:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-LG-GEz">
+                                <rect key="frame" x="515" y="497" width="76.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72°F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl2-gy-W3U" userLabel="Temp Label">
+                                <rect key="frame" x="198" y="171" width="204" height="119.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" red="0.079999210858585856" green="0.079999210858585856" blue="0.079999210858585856" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uxq-yO-sQ5" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="50" id="5Kf-rY-kGz"/>
                             <constraint firstAttribute="centerX" secondItem="Jl2-gy-W3U" secondAttribute="centerX" id="5wO-rP-Tbv"/>
                             <constraint firstItem="Pce-Iq-b4U" firstAttribute="leading" secondItem="Jl2-gy-W3U" secondAttribute="leading" multiplier="2/3" id="66h-Px-91i"/>
                             <constraint firstAttribute="centerY" secondItem="Pce-Iq-b4U" secondAttribute="centerY" multiplier="3/2" id="7qu-Iw-Gg7"/>
                             <constraint firstItem="Jl2-gy-W3U" firstAttribute="top" secondItem="Pce-Iq-b4U" secondAttribute="bottom" constant="8" symbolic="YES" id="8TF-Op-SL3"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="7eK-R3-bPB" secondAttribute="bottom" constant="8" symbolic="YES" id="BmM-TY-biI"/>
+                            <constraint firstItem="uxq-yO-sQ5" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="C4o-CG-waj"/>
+                            <constraint firstItem="uxq-yO-sQ5" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="8" id="Ic2-bB-wHs"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="uxq-yO-sQ5" secondAttribute="bottom" constant="8" symbolic="YES" id="K9Q-ZI-fP9"/>
                             <constraint firstItem="VCw-f0-m2a" firstAttribute="top" secondItem="Jl2-gy-W3U" secondAttribute="bottom" constant="-40" id="StQ-Oj-TXu"/>
                             <constraint firstItem="Jl2-gy-W3U" firstAttribute="top" secondItem="Pce-Iq-b4U" secondAttribute="bottom" constant="4" id="VGV-p4-X7B"/>
-                            <constraint firstAttribute="centerY" secondItem="Jl2-gy-W3U" secondAttribute="centerY" id="d3c-Kf-KkE"/>
-                            <constraint firstAttribute="trailing" secondItem="7eK-R3-bPB" secondAttribute="trailing" constant="20" symbolic="YES" id="gGK-BG-NLl"/>
+                            <constraint firstItem="7eK-R3-bPB" firstAttribute="top" secondItem="CK0-LG-GEz" secondAttribute="bottom" id="VUM-jt-ftm"/>
+                            <constraint firstAttribute="centerY" secondItem="Jl2-gy-W3U" secondAttribute="centerY" multiplier="1.3" id="d3c-Kf-KkE"/>
+                            <constraint firstItem="7eK-R3-bPB" firstAttribute="trailing" secondItem="CK0-LG-GEz" secondAttribute="trailing" id="fiz-BT-2zI"/>
+                            <constraint firstItem="uxq-yO-sQ5" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="8" id="fts-B8-cUg"/>
+                            <constraint firstAttribute="trailing" secondItem="7eK-R3-bPB" secondAttribute="trailing" constant="8" id="gGK-BG-NLl"/>
+                            <constraint firstAttribute="trailing" secondItem="uxq-yO-sQ5" secondAttribute="trailing" constant="50" id="m2b-6M-SEt"/>
+                            <constraint firstItem="uxq-yO-sQ5" firstAttribute="top" secondItem="VCw-f0-m2a" secondAttribute="bottom" constant="64" id="mkr-EO-XGy"/>
+                            <constraint firstItem="Jl2-gy-W3U" firstAttribute="centerX" secondItem="uxq-yO-sQ5" secondAttribute="centerX" id="phZ-kB-d9O"/>
                             <constraint firstItem="Pce-Iq-b4U" firstAttribute="centerX" secondItem="Jl2-gy-W3U" secondAttribute="centerX" multiplier="3/4" id="sis-Pd-6Wd"/>
                             <constraint firstAttribute="centerX" secondItem="Pce-Iq-b4U" secondAttribute="centerX" id="ukS-a3-UfR"/>
                             <constraint firstItem="7eK-R3-bPB" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" symbolic="YES" id="yWs-2H-i7Q"/>
@@ -64,6 +103,10 @@
                                 <exclude reference="sis-Pd-6Wd"/>
                                 <exclude reference="ukS-a3-UfR"/>
                                 <exclude reference="8TF-Op-SL3"/>
+                                <exclude reference="C4o-CG-waj"/>
+                                <exclude reference="Ic2-bB-wHs"/>
+                                <exclude reference="fts-B8-cUg"/>
+                                <exclude reference="K9Q-ZI-fP9"/>
                                 <exclude reference="yWs-2H-i7Q"/>
                             </mask>
                         </variation>
@@ -72,6 +115,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="7eK-R3-bPB" id="3Gi-8B-RgP"/>
                         <outlet property="emojiLabel" destination="VCw-f0-m2a" id="ry5-6e-xxX"/>
+                        <outlet property="refreshButton" destination="uxq-yO-sQ5" id="qGT-2O-NZQ"/>
                         <outlet property="summaryLabel" destination="Pce-Iq-b4U" id="FTZ-rr-edM"/>
                         <outlet property="tempLabel" destination="Jl2-gy-W3U" id="Kwp-hf-Bwe"/>
                     </connections>
