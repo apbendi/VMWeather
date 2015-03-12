@@ -1,18 +1,10 @@
-//
-//  SecondViewController.m
-//  VMWeather
-//
-//  Created by Ben DiFrancesco on 3/12/15.
-//  Copyright (c) 2015 Ben DiFrancesco. All rights reserved.
-//
+#import "FirstViewController.h"
 
-#import "SecondViewController.h"
-
-@interface SecondViewController ()
+@interface FirstViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation FirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

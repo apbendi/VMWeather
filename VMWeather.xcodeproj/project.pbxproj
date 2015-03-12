@@ -33,12 +33,12 @@
 		B4E628FE1AB21021006A1A16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4E629001AB21021006A1A16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4E629011AB21021006A1A16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B4E629031AB21021006A1A16 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		B4E629041AB21021006A1A16 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		B4E629061AB21021006A1A16 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		B4E629071AB21021006A1A16 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		B4E629031AB21021006A1A16 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../FirstViewController.h; sourceTree = "<group>"; };
+		B4E629041AB21021006A1A16 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../FirstViewController.m; sourceTree = "<group>"; };
+		B4E629061AB21021006A1A16 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ../SecondViewController.h; sourceTree = "<group>"; };
+		B4E629071AB21021006A1A16 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ../SecondViewController.m; sourceTree = "<group>"; };
 		B4E6290A1AB21021006A1A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B4E6290C1AB21021006A1A16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B4E6290C1AB21021006A1A16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		B4E6290F1AB21021006A1A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B4E629151AB21021006A1A16 /* VMWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VMWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E6291A1AB21021006A1A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,15 +84,10 @@
 		B4E628FB1AB21021006A1A16 /* VMWeather */ = {
 			isa = PBXGroup;
 			children = (
+				B4E629251AB2106A006A1A16 /* Views */,
+				B4E629261AB210A2006A1A16 /* ViewControllers */,
 				B4E629001AB21021006A1A16 /* AppDelegate.h */,
 				B4E629011AB21021006A1A16 /* AppDelegate.m */,
-				B4E629031AB21021006A1A16 /* FirstViewController.h */,
-				B4E629041AB21021006A1A16 /* FirstViewController.m */,
-				B4E629061AB21021006A1A16 /* SecondViewController.h */,
-				B4E629071AB21021006A1A16 /* SecondViewController.m */,
-				B4E629091AB21021006A1A16 /* Main.storyboard */,
-				B4E6290C1AB21021006A1A16 /* Images.xcassets */,
-				B4E6290E1AB21021006A1A16 /* LaunchScreen.xib */,
 				B4E628FC1AB21021006A1A16 /* Supporting Files */,
 			);
 			path = VMWeather;
@@ -122,6 +117,27 @@
 				B4E6291A1AB21021006A1A16 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4E629251AB2106A006A1A16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4E629091AB21021006A1A16 /* Main.storyboard */,
+				B4E6290C1AB21021006A1A16 /* Images.xcassets */,
+				B4E6290E1AB21021006A1A16 /* LaunchScreen.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4E629261AB210A2006A1A16 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4E629031AB21021006A1A16 /* FirstViewController.h */,
+				B4E629041AB21021006A1A16 /* FirstViewController.m */,
+				B4E629061AB21021006A1A16 /* SecondViewController.h */,
+				B4E629071AB21021006A1A16 /* SecondViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +272,7 @@
 				B4E6290A1AB21021006A1A16 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B4E6290E1AB21021006A1A16 /* LaunchScreen.xib */ = {
@@ -264,6 +281,7 @@
 				B4E6290F1AB21021006A1A16 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
