@@ -26,6 +26,24 @@
 
     if ([weather.iconFlag isEqualToString:kFCIconClearDay]) {
         self.emoji = @"☀️";
+    } else if ([weather.iconFlag isEqualToString:kFCIconClearNight]) {
+        self.emoji = @"🌕";
+    } else if ([weather.iconFlag isEqualToString:kFCIconCloudy]) {
+        self.emoji = @"☁️";
+    } else if ([weather.iconFlag isEqualToString:kFCIconPartlyCloudyDay]) {
+        self.emoji = @"⛅️";
+    } else if ([weather.iconFlag isEqualToString:kFCIconPartlyCloudyNight]) {
+        self.emoji = @"☁️🌑";
+    } else if ([weather.iconFlag isEqualToString:kFCIconRain]) {
+        self.emoji = @"☔️";
+    } else if ([weather.iconFlag isEqualToString:kFCIconSleet]) {
+        self.emoji = @"❄️💧";
+    } else if ([weather.iconFlag isEqualToString:kFCIconSnow]) {
+        self.emoji = @"❄️";
+    } else if([weather.iconFlag isEqualToString:kFCIconWind]) {
+        self.emoji = @"💨";
+    } else if([weather.iconFlag isEqualToString:kFCIconFog]) {
+        self.emoji = @"🌁";
     } else {
         self.emoji = @"❓";
     }
