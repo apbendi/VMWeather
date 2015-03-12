@@ -112,7 +112,7 @@
 				B482C20E1AB220EC00D2DF00 /* VMCurrentlyViewModel.m */,
 			);
 			name = ViewModel;
-			path = ../ViewModels;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		B4E628F01AB21020006A1A16 = {
