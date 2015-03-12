@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B482C1FE1AB212BD00D2DF00 /* CurrentlyViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = B4E629031AB21021006A1A16 /* CurrentlyViewController.h */; };
 		B482C1FF1AB212EE00D2DF00 /* HourlyViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = B4E629061AB21021006A1A16 /* HourlyViewController.h */; };
+		B482C2031AB2147200D2DF00 /* VMAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = B482C2021AB2147200D2DF00 /* VMAPIController.m */; };
 		B4E628FF1AB21021006A1A16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E628FE1AB21021006A1A16 /* main.m */; };
 		B4E629021AB21021006A1A16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629011AB21021006A1A16 /* AppDelegate.m */; };
 		B4E629051AB21021006A1A16 /* CurrentlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629041AB21021006A1A16 /* CurrentlyViewController.m */; };
@@ -17,6 +18,7 @@
 		B4E6290D1AB21021006A1A16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E6290C1AB21021006A1A16 /* Images.xcassets */; };
 		B4E629101AB21021006A1A16 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E6290E1AB21021006A1A16 /* LaunchScreen.xib */; };
 		B4E6291C1AB21021006A1A16 /* VMWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6291B1AB21021006A1A16 /* VMWeatherTests.m */; };
+		C7AC733B7E0960F85DBA35A1 /* libPods-VMWeather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 735FD2527A397683D26BF783 /* libPods-VMWeather.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08305E3D8725179C85BE60C7 /* Pods-VMWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VMWeather/Pods-VMWeather.debug.xcconfig"; sourceTree = "<group>"; };
+		735FD2527A397683D26BF783 /* libPods-VMWeather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VMWeather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7948176A756481B9F752600F /* Pods-VMWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-VMWeather/Pods-VMWeather.release.xcconfig"; sourceTree = "<group>"; };
+		B482C2011AB2147200D2DF00 /* VMAPIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMAPIController.h; sourceTree = "<group>"; };
+		B482C2021AB2147200D2DF00 /* VMAPIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMAPIController.m; sourceTree = "<group>"; };
 		B4E628F91AB21021006A1A16 /* VMWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E628FD1AB21021006A1A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4E628FE1AB21021006A1A16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7AC733B7E0960F85DBA35A1 /* libPods-VMWeather.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +73,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B482C2001AB2143400D2DF00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B482C2011AB2147200D2DF00 /* VMAPIController.h */,
+				B482C2021AB2147200D2DF00 /* VMAPIController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		B4E628F01AB21020006A1A16 = {
 			isa = PBXGroup;
 			children = (
 				B4E628FB1AB21021006A1A16 /* VMWeather */,
 				B4E629181AB21021006A1A16 /* VMWeatherTests */,
 				B4E628FA1AB21021006A1A16 /* Products */,
+				C5D2135536C02918766912F6 /* Pods */,
+				FC305A75F8DF21E9D2952636 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +105,7 @@
 		B4E628FB1AB21021006A1A16 /* VMWeather */ = {
 			isa = PBXGroup;
 			children = (
+				B482C2001AB2143400D2DF00 /* Controllers */,
 				B4E629251AB2106A006A1A16 /* Views */,
 				B4E629261AB210A2006A1A16 /* ViewControllers */,
 				B4E629001AB21021006A1A16 /* AppDelegate.h */,
@@ -142,6 +162,23 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		C5D2135536C02918766912F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08305E3D8725179C85BE60C7 /* Pods-VMWeather.debug.xcconfig */,
+				7948176A756481B9F752600F /* Pods-VMWeather.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC305A75F8DF21E9D2952636 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				735FD2527A397683D26BF783 /* libPods-VMWeather.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4E6291F1AB21021006A1A16 /* Build configuration list for PBXNativeTarget "VMWeather" */;
 			buildPhases = (
+				7580D7526FEF40F000E2E2D1 /* Check Pods Manifest.lock */,
 				B4E628F51AB21020006A1A16 /* Sources */,
 				B4E628F61AB21020006A1A16 /* Frameworks */,
 				B4E628F71AB21020006A1A16 /* Resources */,
+				0FC597ADCA740E48D8489EE9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,11 +276,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FC597ADCA740E48D8489EE9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VMWeather/Pods-VMWeather-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7580D7526FEF40F000E2E2D1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B4E628F51AB21020006A1A16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B482C2031AB2147200D2DF00 /* VMAPIController.m in Sources */,
 				B482C1FF1AB212EE00D2DF00 /* HourlyViewController.h in Sources */,
 				B482C1FE1AB212BD00D2DF00 /* CurrentlyViewController.h in Sources */,
 				B4E629081AB21021006A1A16 /* HourlyViewController.m in Sources */,
@@ -369,6 +442,7 @@
 		};
 		B4E629201AB21021006A1A16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08305E3D8725179C85BE60C7 /* Pods-VMWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VMWeather/Info.plist;
@@ -379,6 +453,7 @@
 		};
 		B4E629211AB21021006A1A16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7948176A756481B9F752600F /* Pods-VMWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VMWeather/Info.plist;
