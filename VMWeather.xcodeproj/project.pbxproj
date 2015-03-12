@@ -10,6 +10,8 @@
 		B482C1FE1AB212BD00D2DF00 /* CurrentlyViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = B4E629031AB21021006A1A16 /* CurrentlyViewController.h */; };
 		B482C1FF1AB212EE00D2DF00 /* HourlyViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = B4E629061AB21021006A1A16 /* HourlyViewController.h */; };
 		B482C2031AB2147200D2DF00 /* VMAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = B482C2021AB2147200D2DF00 /* VMAPIController.m */; };
+		B482C2071AB2173F00D2DF00 /* VMCurrentWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = B482C2061AB2173F00D2DF00 /* VMCurrentWeather.m */; };
+		B482C20B1AB21A1600D2DF00 /* VMCurrentlyController.m in Sources */ = {isa = PBXBuildFile; fileRef = B482C20A1AB21A1600D2DF00 /* VMCurrentlyController.m */; };
 		B4E628FF1AB21021006A1A16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E628FE1AB21021006A1A16 /* main.m */; };
 		B4E629021AB21021006A1A16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629011AB21021006A1A16 /* AppDelegate.m */; };
 		B4E629051AB21021006A1A16 /* CurrentlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629041AB21021006A1A16 /* CurrentlyViewController.m */; };
@@ -37,6 +39,11 @@
 		7948176A756481B9F752600F /* Pods-VMWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VMWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-VMWeather/Pods-VMWeather.release.xcconfig"; sourceTree = "<group>"; };
 		B482C2011AB2147200D2DF00 /* VMAPIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMAPIController.h; sourceTree = "<group>"; };
 		B482C2021AB2147200D2DF00 /* VMAPIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMAPIController.m; sourceTree = "<group>"; };
+		B482C2051AB2173F00D2DF00 /* VMCurrentWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMCurrentWeather.h; sourceTree = "<group>"; };
+		B482C2061AB2173F00D2DF00 /* VMCurrentWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMCurrentWeather.m; sourceTree = "<group>"; };
+		B482C2081AB219AD00D2DF00 /* Secrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
+		B482C2091AB21A1600D2DF00 /* VMCurrentlyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMCurrentlyController.h; sourceTree = "<group>"; };
+		B482C20A1AB21A1600D2DF00 /* VMCurrentlyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMCurrentlyController.m; sourceTree = "<group>"; };
 		B4E628F91AB21021006A1A16 /* VMWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E628FD1AB21021006A1A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4E628FE1AB21021006A1A16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,8 +85,19 @@
 			children = (
 				B482C2011AB2147200D2DF00 /* VMAPIController.h */,
 				B482C2021AB2147200D2DF00 /* VMAPIController.m */,
+				B482C2091AB21A1600D2DF00 /* VMCurrentlyController.h */,
+				B482C20A1AB21A1600D2DF00 /* VMCurrentlyController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B482C2041AB2170A00D2DF00 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B482C2051AB2173F00D2DF00 /* VMCurrentWeather.h */,
+				B482C2061AB2173F00D2DF00 /* VMCurrentWeather.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B4E628F01AB21020006A1A16 = {
@@ -105,6 +123,7 @@
 		B4E628FB1AB21021006A1A16 /* VMWeather */ = {
 			isa = PBXGroup;
 			children = (
+				B482C2041AB2170A00D2DF00 /* Models */,
 				B482C2001AB2143400D2DF00 /* Controllers */,
 				B4E629251AB2106A006A1A16 /* Views */,
 				B4E629261AB210A2006A1A16 /* ViewControllers */,
@@ -120,6 +139,7 @@
 			children = (
 				B4E628FD1AB21021006A1A16 /* Info.plist */,
 				B4E628FE1AB21021006A1A16 /* main.m */,
+				B482C2081AB219AD00D2DF00 /* Secrets.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -317,10 +337,12 @@
 				B482C2031AB2147200D2DF00 /* VMAPIController.m in Sources */,
 				B482C1FF1AB212EE00D2DF00 /* HourlyViewController.h in Sources */,
 				B482C1FE1AB212BD00D2DF00 /* CurrentlyViewController.h in Sources */,
+				B482C2071AB2173F00D2DF00 /* VMCurrentWeather.m in Sources */,
 				B4E629081AB21021006A1A16 /* HourlyViewController.m in Sources */,
 				B4E629021AB21021006A1A16 /* AppDelegate.m in Sources */,
 				B4E629051AB21021006A1A16 /* CurrentlyViewController.m in Sources */,
 				B4E628FF1AB21021006A1A16 /* main.m in Sources */,
+				B482C20B1AB21A1600D2DF00 /* VMCurrentlyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

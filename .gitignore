@@ -4,4 +4,4 @@ build/
 xcuserdata/
 *.xcworkspace/
 Pods
-HERAuthData.h
+Secrets.h

@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
 
-@class CurrentWeather;
+@class VMCurrentWeather;
 
-typedef void(^CurrentWeatherCompletionBlock)(CurrentWeather *weather);
+typedef void(^CurrentWeatherCompletionBlock)(VMCurrentWeather *weather);
 
 @interface VMAPIController : NSObject
 
