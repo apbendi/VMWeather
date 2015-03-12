@@ -1,11 +1,11 @@
-#import "CurrentlyViewController.h"
+#import "VMCurrentlyViewController.h"
 #import "VMCurrentlyController.h"
 
-@interface CurrentlyViewController ()
+@interface VMCurrentlyViewController ()
 @property (nonatomic) VMCurrentlyController *controller;
 @end
 
-@implementation CurrentlyViewController
+@implementation VMCurrentlyViewController
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
