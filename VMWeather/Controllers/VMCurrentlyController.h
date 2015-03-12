@@ -3,5 +3,5 @@
 @class VMCurrentlyViewModel;
 
 @interface VMCurrentlyController : NSObject
-@property (nonatomic) VMCurrentlyViewModel *viewModel;
+@property (nonatomic, readonly) VMCurrentlyViewModel *viewModel;
 @end

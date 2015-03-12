@@ -5,9 +5,9 @@
 
 - (instancetype)initWithCurrentWeather:(VMCurrentWeather *)weather;
 
-@property (nonatomic) NSString *tempString;
-@property (nonatomic) NSString *summary;
-@property (nonatomic) NSString *dateString;
-@property (nonatomic) UIImage *icon;
+@property (nonatomic, readonly) NSString *tempString;
+@property (nonatomic, readonly) NSString *summary;
+@property (nonatomic, readonly) NSString *dateString;
+@property (nonatomic, readonly) UIImage *icon;
 
 @end

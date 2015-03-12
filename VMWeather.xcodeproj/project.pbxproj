@@ -86,10 +86,10 @@
 		B482C2001AB2143400D2DF00 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B482C2011AB2147200D2DF00 /* VMAPIController.h */,
-				B482C2021AB2147200D2DF00 /* VMAPIController.m */,
 				B482C2091AB21A1600D2DF00 /* VMCurrentlyController.h */,
 				B482C20A1AB21A1600D2DF00 /* VMCurrentlyController.m */,
+				B482C2011AB2147200D2DF00 /* VMAPIController.h */,
+				B482C2021AB2147200D2DF00 /* VMAPIController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

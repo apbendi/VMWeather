@@ -1,5 +1,12 @@
 #import "VMCurrentlyViewModel.h"
 
+@interface VMCurrentlyViewModel ()
+@property (nonatomic, readwrite) NSString *tempString;
+@property (nonatomic, readwrite) NSString *summary;
+@property (nonatomic, readwrite) NSString *dateString;
+@property (nonatomic, readwrite) UIImage *icon;
+@end
+
 @implementation VMCurrentlyViewModel
 
 - (instancetype)initWithCurrentWeather:(VMCurrentWeather *)weather

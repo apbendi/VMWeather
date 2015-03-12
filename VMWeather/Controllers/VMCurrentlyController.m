@@ -4,6 +4,7 @@
 #import "Secrets.h"
 
 @interface VMCurrentlyController ()
+@property (nonatomic, readwrite) VMCurrentlyViewModel *viewModel;
 @property (nonatomic) VMAPIController *apiController;
 @end
 

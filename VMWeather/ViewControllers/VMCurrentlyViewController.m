@@ -1,5 +1,6 @@
 #import "VMCurrentlyViewController.h"
 #import "VMCurrentlyController.h"
+#import "VMCurrentlyViewModel.h"
 
 @interface VMCurrentlyViewController ()
 @property (nonatomic) VMCurrentlyController *controller;
@@ -19,6 +20,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self.controller addObserver:self forKeyPath:@"viewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) context:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.controller removeObserver:self forKeyPath:@"viewModel"];
+    [super viewWillDisappear:animated];
+}
+
+- (void)refreshDisplayWithViewModel:(VMCurrentlyViewModel *)viewModel
+{
+    NSLog(@"Refresh Display");
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (object == self.controller && [keyPath isEqualToString:@"viewModel"]) {
+        [self refreshDisplayWithViewModel:[object viewModel]];
+    }
 }
 
 @end
