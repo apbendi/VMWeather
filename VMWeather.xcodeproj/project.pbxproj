@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B482C1FE1AB212BD00D2DF00 /* CurrentlyViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = B4E629031AB21021006A1A16 /* CurrentlyViewController.h */; };
+		B482C1FF1AB212EE00D2DF00 /* HourlyViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = B4E629061AB21021006A1A16 /* HourlyViewController.h */; };
 		B4E628FF1AB21021006A1A16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E628FE1AB21021006A1A16 /* main.m */; };
 		B4E629021AB21021006A1A16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629011AB21021006A1A16 /* AppDelegate.m */; };
-		B4E629051AB21021006A1A16 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629041AB21021006A1A16 /* FirstViewController.m */; };
-		B4E629081AB21021006A1A16 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629071AB21021006A1A16 /* SecondViewController.m */; };
+		B4E629051AB21021006A1A16 /* CurrentlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629041AB21021006A1A16 /* CurrentlyViewController.m */; };
+		B4E629081AB21021006A1A16 /* HourlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E629071AB21021006A1A16 /* HourlyViewController.m */; };
 		B4E6290B1AB21021006A1A16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E629091AB21021006A1A16 /* Main.storyboard */; };
 		B4E6290D1AB21021006A1A16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E6290C1AB21021006A1A16 /* Images.xcassets */; };
 		B4E629101AB21021006A1A16 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E6290E1AB21021006A1A16 /* LaunchScreen.xib */; };
@@ -33,10 +35,10 @@
 		B4E628FE1AB21021006A1A16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4E629001AB21021006A1A16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4E629011AB21021006A1A16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B4E629031AB21021006A1A16 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ../FirstViewController.h; sourceTree = "<group>"; };
-		B4E629041AB21021006A1A16 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ../FirstViewController.m; sourceTree = "<group>"; };
-		B4E629061AB21021006A1A16 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ../SecondViewController.h; sourceTree = "<group>"; };
-		B4E629071AB21021006A1A16 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ../SecondViewController.m; sourceTree = "<group>"; };
+		B4E629031AB21021006A1A16 /* CurrentlyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentlyViewController.h; sourceTree = "<group>"; };
+		B4E629041AB21021006A1A16 /* CurrentlyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentlyViewController.m; sourceTree = "<group>"; };
+		B4E629061AB21021006A1A16 /* HourlyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HourlyViewController.h; sourceTree = "<group>"; };
+		B4E629071AB21021006A1A16 /* HourlyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HourlyViewController.m; sourceTree = "<group>"; };
 		B4E6290A1AB21021006A1A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4E6290C1AB21021006A1A16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		B4E6290F1AB21021006A1A16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -132,10 +134,10 @@
 		B4E629261AB210A2006A1A16 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B4E629031AB21021006A1A16 /* FirstViewController.h */,
-				B4E629041AB21021006A1A16 /* FirstViewController.m */,
-				B4E629061AB21021006A1A16 /* SecondViewController.h */,
-				B4E629071AB21021006A1A16 /* SecondViewController.m */,
+				B4E629031AB21021006A1A16 /* CurrentlyViewController.h */,
+				B4E629041AB21021006A1A16 /* CurrentlyViewController.m */,
+				B4E629061AB21021006A1A16 /* HourlyViewController.h */,
+				B4E629071AB21021006A1A16 /* HourlyViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -240,9 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E629081AB21021006A1A16 /* SecondViewController.m in Sources */,
+				B482C1FF1AB212EE00D2DF00 /* HourlyViewController.h in Sources */,
+				B482C1FE1AB212BD00D2DF00 /* CurrentlyViewController.h in Sources */,
+				B4E629081AB21021006A1A16 /* HourlyViewController.m in Sources */,
 				B4E629021AB21021006A1A16 /* AppDelegate.m in Sources */,
-				B4E629051AB21021006A1A16 /* FirstViewController.m in Sources */,
+				B4E629051AB21021006A1A16 /* CurrentlyViewController.m in Sources */,
 				B4E628FF1AB21021006A1A16 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +440,7 @@
 				B4E629211AB21021006A1A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4E629221AB21021006A1A16 /* Build configuration list for PBXNativeTarget "VMWeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +449,7 @@
 				B4E629241AB21021006A1A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
