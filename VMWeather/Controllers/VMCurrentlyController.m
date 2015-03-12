@@ -1,5 +1,6 @@
 #import "VMCurrentlyController.h"
 #import "VMAPIController.h"
+#import "VMCurrentlyViewModel.h"
 #import "Secrets.h"
 
 @interface VMCurrentlyController ()
@@ -16,7 +17,7 @@
     self.apiController = [[VMAPIController alloc] initWithAPIKey:FORECAST_IO_API_KEY];
 
     [self.apiController fetchCurrentWeatherForLatitude:39.9522222 longitude:-75.1641667 succes:^(VMCurrentWeather *weather) {
-        
+        self.viewModel = [[VMCurrentlyViewModel alloc] initWithCurrentWeather:weather];
     } failure:^(NSError *error, NSString *message) {
 
     }];

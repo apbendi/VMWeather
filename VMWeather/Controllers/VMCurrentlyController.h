@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
-@interface VMCurrentlyController : NSObject
+@class VMCurrentlyViewModel;
 
+@interface VMCurrentlyController : NSObject
+@property (nonatomic) VMCurrentlyViewModel *viewModel;
 @end
