@@ -33,6 +33,11 @@
 - (void)refreshDisplayWithViewModel:(VMCurrentlyViewModel *)viewModel
 {
     NSLog(@"Refresh Display");
+
+    self.summaryLabel.text = viewModel.summary;
+    self.tempLabel.text = viewModel.tempString;
+    self.dateLabel.text = viewModel.dateString;
+    self.emojiLabel.text = viewModel.emoji;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

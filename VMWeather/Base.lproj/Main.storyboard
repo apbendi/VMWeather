@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Currently-->
@@ -16,29 +17,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="221" y="279" width="157.5" height="41.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Summary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pce-Iq-b4U" userLabel="Summary Label">
+                                <rect key="frame" x="132" y="211" width="170" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="203" y="329" width="194.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eK-R3-bPB" userLabel="Date Label">
+                                <rect key="frame" x="515" y="522" width="64.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72°F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl2-gy-W3U" userLabel="Temp Label">
+                                <rect key="frame" x="198" y="240" width="204" height="119.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCw-f0-m2a" userLabel="Emoji Label">
+                                <rect key="frame" x="374.5" y="320" width="72" height="86"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstAttribute="centerX" secondItem="Jl2-gy-W3U" secondAttribute="centerX" id="5wO-rP-Tbv"/>
+                            <constraint firstItem="Pce-Iq-b4U" firstAttribute="leading" secondItem="Jl2-gy-W3U" secondAttribute="leading" multiplier="2/3" id="66h-Px-91i"/>
+                            <constraint firstAttribute="centerY" secondItem="Pce-Iq-b4U" secondAttribute="centerY" multiplier="3/2" id="7qu-Iw-Gg7"/>
+                            <constraint firstItem="Jl2-gy-W3U" firstAttribute="top" secondItem="Pce-Iq-b4U" secondAttribute="bottom" constant="8" symbolic="YES" id="8TF-Op-SL3"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="7eK-R3-bPB" secondAttribute="bottom" constant="8" symbolic="YES" id="BmM-TY-biI"/>
+                            <constraint firstItem="VCw-f0-m2a" firstAttribute="top" secondItem="Jl2-gy-W3U" secondAttribute="bottom" constant="-40" id="StQ-Oj-TXu"/>
+                            <constraint firstItem="Jl2-gy-W3U" firstAttribute="top" secondItem="Pce-Iq-b4U" secondAttribute="bottom" constant="4" id="VGV-p4-X7B"/>
+                            <constraint firstAttribute="centerY" secondItem="Jl2-gy-W3U" secondAttribute="centerY" id="d3c-Kf-KkE"/>
+                            <constraint firstAttribute="trailing" secondItem="7eK-R3-bPB" secondAttribute="trailing" constant="20" symbolic="YES" id="gGK-BG-NLl"/>
+                            <constraint firstItem="Pce-Iq-b4U" firstAttribute="centerX" secondItem="Jl2-gy-W3U" secondAttribute="centerX" multiplier="3/4" id="sis-Pd-6Wd"/>
+                            <constraint firstAttribute="centerX" secondItem="Pce-Iq-b4U" secondAttribute="centerX" id="ukS-a3-UfR"/>
+                            <constraint firstItem="7eK-R3-bPB" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" symbolic="YES" id="yWs-2H-i7Q"/>
+                            <constraint firstItem="Jl2-gy-W3U" firstAttribute="trailing" secondItem="VCw-f0-m2a" secondAttribute="trailing" multiplier="9/10" id="z8L-Ij-1wb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7qu-Iw-Gg7"/>
+                                <exclude reference="sis-Pd-6Wd"/>
+                                <exclude reference="ukS-a3-UfR"/>
+                                <exclude reference="8TF-Op-SL3"/>
+                                <exclude reference="yWs-2H-i7Q"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Currently" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="7eK-R3-bPB" id="3Gi-8B-RgP"/>
+                        <outlet property="emojiLabel" destination="VCw-f0-m2a" id="ry5-6e-xxX"/>
+                        <outlet property="summaryLabel" destination="Pce-Iq-b4U" id="FTZ-rr-edM"/>
+                        <outlet property="tempLabel" destination="Jl2-gy-W3U" id="Kwp-hf-Bwe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

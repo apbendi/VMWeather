@@ -7,6 +7,7 @@
 
 @property (nonatomic, readonly) NSString *tempString;
 @property (nonatomic, readonly) NSString *summary;
+@property (nonatomic, readonly) NSString *emoji;
 @property (nonatomic, readonly) NSString *dateString;
 @property (nonatomic, readonly) UIImage *icon;
 
