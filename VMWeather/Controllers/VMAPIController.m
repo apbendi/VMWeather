@@ -21,15 +21,22 @@
     return self;
 }
 
-- (void)fetchCurrentWeatherWithCompletion:(CurrentWeatherCompletionBlock)block
+- (void)fetchCurrentWeatherForLatitude:(double)latitude
+                             longitude:(double)longitude
+                                succes:(CurrentWeatherCompletionBlock)successBlock
+                               failure:(VMAPIFailureBlock)failureBlock
 {
     NSArray *excludes = [NSArray arrayWithObjects:kFCMinutelyForecast, kFCDailyForecast, kFCHourlyForecast, kFCAlerts, kFCFlags, nil];
 
     [self.apiManager getForecastForLatitude:39.9522222 longitude:-75.1641667 time:nil exclusions:excludes success:^(id JSON) {
-        NSLog(@"JSON: %@", JSON);
+
+        NSDictionary *currently = [JSON objectForKey:@"currently"];
+        VMCurrentWeather *weather = [VMCurrentWeather weatherWithJSON:currently];
+        successBlock(weather);
     } failure:^(NSError *error, id response) {
+
         NSString *message = [self.apiManager messageForError:error withResponse:response];
-        NSLog(@"Current Weather failed to fetch: %@", message);
+        failureBlock(error, message);
     }];
 }
 
